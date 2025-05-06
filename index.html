@@ -4,72 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Meal Plan</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Weekly Meal Plan</h1>
-        <!-- <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#meal-plan">Meal Plan</a></li>
-                <li><a href="#shopping-list">Shopping List</a></li>
-            </ul>
-        </nav> -->
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-green-500 text-white py-5">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-3xl font-semibold text-center">Weekly Meal Plan</h1>
+        </div>
     </header>
 
-    <section id="meal-plan">
-        <h2>Meal Plan for the Week</h2>
-        <table>
-            <tr>
-                <th>Day</th>
-                <th>Breakfast</th>
-                <th>Lunch</th>
-                <th>Dinner</th>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Beef, Daal, Vegetable Fry</td>
-                <td>Leftover Beef, Egg, Smashed Potatoes</td>
-            </tr>
-            <tr>
-                <td>Sunday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Fish, Daal, Vegetable Fry</td>
-                <td>Leftover Fish, Daal</td>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Egg Curry, Daal, Vegetable Fry</td>
-                <td>Chicken curry, Daal</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Chicken curry, Daal</td>
-                <td>Egg curry, Daal</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Fish curry, Daal, Vegetables</td>
-                <td>Leftover Fish, Smashed Potatoes</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>Vegetable Fry, Daal</td>
-                <td>Fish curry, Daal, Vegetables</td>
-                <td>Leftover Fish, Daal</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>Khichuri, Egg</td>
-                <td>Chicken, Daal</td>
-                <td>Same</td>
-            </tr>
-        </table>
+    <!-- Meal Plan Section -->
+    <section id="meal-plan" class="py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-semibold mb-6">Meal Plan for the Week</h2>
+            
+            <!-- Mobile View - Cards -->
+            <div class="md:hidden space-y-6">
+                <!-- Saturday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Saturday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Beef, Daal, Vegetable Fry</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Leftover Beef, Egg, Smashed Potatoes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Sunday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Fish, Daal, Vegetable Fry</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Leftover Fish, Daal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Monday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Egg Curry, Daal, Vegetable Fry</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Chicken curry, Daal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuesday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Tuesday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Chicken curry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Egg curry, Daal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Wednesday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Fish curry, Daal, Vegetables</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Leftover Fish, Smashed Potatoes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thursday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Thursday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Vegetable Fry, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Fish curry, Daal, Vegetables</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Leftover Fish, Daal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friday -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-green-500 text-white py-2 px-4 font-medium">Friday</div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-medium text-green-600">Breakfast</h3>
+                            <p class="mt-1">Khichuri, Egg</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Lunch</h3>
+                            <p class="mt-1">Chicken, Daal</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-green-600">Dinner</h3>
+                            <p class="mt-1">Same</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop View - Table -->
+            <div class="hidden md:block overflow-x-auto shadow-xl border border-gray-300 rounded-lg">
+                <table class="min-w-full text-left table-auto bg-white">
+                    <thead class="bg-green-500 text-white">
+                        <tr>
+                            <th class="py-3 px-6">Day</th>
+                            <th class="py-3 px-6">Breakfast</th>
+                            <th class="py-3 px-6">Lunch</th>
+                            <th class="py-3 px-6">Dinner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-6">Saturday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Beef, Daal, Vegetable Fry</td>
+                            <td class="py-3 px-6">Leftover Beef, Egg, Smashed Potatoes</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-3 px-6">Sunday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Fish, Daal, Vegetable Fry</td>
+                            <td class="py-3 px-6">Leftover Fish, Daal</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-6">Monday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Egg Curry, Daal, Vegetable Fry</td>
+                            <td class="py-3 px-6">Chicken curry, Daal</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-3 px-6">Tuesday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Chicken curry, Daal</td>
+                            <td class="py-3 px-6">Egg curry, Daal</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-6">Wednesday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Fish curry, Daal, Vegetables</td>
+                            <td class="py-3 px-6">Leftover Fish, Smashed Potatoes</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-3 px-6">Thursday</td>
+                            <td class="py-3 px-6">Vegetable Fry, Daal</td>
+                            <td class="py-3 px-6">Fish curry, Daal, Vegetables</td>
+                            <td class="py-3 px-6">Leftover Fish, Daal</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-6">Friday</td>
+                            <td class="py-3 px-6">Khichuri, Egg</td>
+                            <td class="py-3 px-6">Chicken, Daal</td>
+                            <td class="py-3 px-6">Same</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
+
 </body>
 </html>
